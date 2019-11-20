@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+    <section id="content-header">
+        <h1>Alterar Usuarios</h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="/admin/users">Alterar Usuarios</a></li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <h3>Alterar Usuario</h3>
+                    </div>
+                    <form action="/admin/users/{$users.iduser}" method="post" role="form">
+                        <div class="form-group">
+                            <label for="desperson">Nome</label>
+                            <input value="{$users.desperson}" type="text" class="form-control" id="desperson" name="desperson" placeholder="DIGITE O NOME ">
+                        </div>
+                        <div class="form-group">
+                            <label for="deslogin">Login</label>
+                            <input value="{$users.deslogin}" type="text" class="form-control" id="deslogin" name="deslogin" placeholder="DIGITE O LOGIN ">
+                        </div>
+                        <div class="form-group">
+                            <label for="nrphone">Telefone</label>
+                            <input value="{$users.nrphone}" type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="DIGITE O TELEFONE ">
+                        </div>
+                        <div class="form-group">
+                            <label for="desemail">Email</label>
+                            <input value="{$users.desemail}" type="text" class="form-control" id="desemail" name="desemail" placeholder="DIGITE O EMAIL">
+                        </div>
+                        <div class="form-group">
+                            <label for="despassword">Password</label>
+                            <input value="{$users.despassword}" type="password" class="form-control" id="despassword" name="despassword" placeholder="DIGITE A SENHA ">
+                        </div>
+                        <div class="checkbox">
+                            <label for="">
+                                <input type="checkbox" name="inadmin" value="1" {if="$users.inadmin == 1"}checked{/if} >Acesso ao Admin
+                            </label>
+                        </div>
+                        <div class="box-footer">
+                            <button class="btn btn-success" type="submit">Concluir Alteração</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

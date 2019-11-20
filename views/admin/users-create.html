@@ -1,0 +1,51 @@
+<div class="content-wrapper">
+    <section id="content-header">
+        <h1>Cadastro de Usuarios</h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="/admin/users">Cadastro de Usuarios</a></li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-success">
+                    <div class="box-header with-border">
+                        <h3>Novo Usuario</h3>
+                    </div>
+                    <form action="/admin/users/create" method="post">
+                        <div class="form-group">
+                            <label for="desperson">Nome</label>
+                            <input type="text" class="form-control" id="desperson" name="desperson" placeholder="DIGITE O NOME ">
+                        </div>
+                        <div class="form-group">
+                            <label for="deslogin">Login</label>
+                            <input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="DIGITE O LOGIN ">
+                        </div>
+                        <div class="form-group">
+                            <label for="nrphone">Telefone</label>
+                            <input type="tel" class="form-control" id="nrphone" name="nrphone" placeholder="DIGITE O TELEFONE ">
+                        </div>
+                        <div class="form-group">
+                            <label for="desemail">Email</label>
+                            <input type="text" class="form-control" id="desemail" name="desemail" placeholder="DIGITE O EMAIL">
+                        </div>
+                        <div class="form-group">
+                            <label for="despassword">Password</label>
+                            <input type="password" class="form-control" id="despassword" name="despassword" placeholder="DIGITE A SENHA ">
+                        </div>
+                        <div class="checkbox">
+                            <label for="">
+                                <input type="checkbox" name="inadmin" value="1">Acesso ao Admin
+                            </label>
+                        </div>
+                        <div class="box-footer">
+                            <button class="btn btn-success" type="submit">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
